@@ -72,18 +72,28 @@ void backward() {
 
 // 左转弯
 void leftTurn() {
-  motor1.run(BACKWARD);  // 电机1反转
-  motor2.run(FORWARD);   // 电机2正转
-  motor3.run(BACKWARD);  // 电机3反转
-  motor4.run(FORWARD);   // 电机4正转
+  motor1.setSpeed(150);   // 设置电机1的速度为150
+  motor2.setSpeed(200);   // 设置电机2的速度为200
+  motor3.setSpeed(150);   // 设置电机3的速度为150
+  motor4.setSpeed(200);   // 设置电机4的速度为200
+
+  motor1.run(BACKWARD);   // 电机1反转
+  motor2.run(FORWARD);    // 电机2正转
+  motor3.run(BACKWARD);   // 电机3反转
+  motor4.run(FORWARD);    // 电机4正转
 }
 
 // 右转弯
 void rightTurn() {
-  motor1.run(FORWARD);   // 电机1正转
-  motor2.run(BACKWARD);  // 电机2反转
-  motor3.run(FORWARD);   // 电机3正转
-  motor4.run(BACKWARD);  // 电机4反转
+  motor1.setSpeed(200);   // 设置电机1的速度为200
+  motor2.setSpeed(150);   // 设置电机2的速度为150
+  motor3.setSpeed(200);   // 设置电机3的速度为200
+  motor4.setSpeed(150);   // 设置电机4的速度为150
+
+  motor1.run(FORWARD);    // 电机1正转
+  motor2.run(BACKWARD);   // 电机2反转
+  motor3.run(FORWARD);    // 电机3正转
+  motor4.run(BACKWARD);   // 电机4反转
 }
 
 // 停止
@@ -93,3 +103,4 @@ void stop() {
   motor3.run(RELEASE);  // 释放电机3，停止转动
   motor4.run(RELEASE);  // 释放电机4，停止转动
 }
+
